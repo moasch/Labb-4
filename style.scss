@@ -1,9 +1,19 @@
 .mainArticleImage {
-padding-left: 189px;
-padding-top: 74px;
+position: absolute; /*testing changing position of picture*/
+left: 189px;
+top: 74px;
 width: 658px;
 height: 553px;
-// position: absolute; /*testing changing position of picture*/
+
+}
+
+.subArticleImage {
+  position: absolute; /*testing changing position of picture*/
+  width: 392px;
+  height: 276px;
+  left: 860px;
+  top: 74px;
+
 }
 
 p {
