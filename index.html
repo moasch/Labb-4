@@ -6,16 +6,27 @@
     <title>Labb 4</title>
   </head>
   <body>
-    <nav class="topnav" id="C4">
-      <ul>
-          <li class="active"> <a href="#home"><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/NewYorkTimes.svg/1280px-NewYorkTimes.svg.png alt="coding dog" width="auto" height="32" > </a></li>
-          <li><a href="#history">News</a></li>
-          <li><a href="#contact">About us</a></li>
-          <li><a href="#faq">Press</a></li>
-          <li><a href="#faq">Careers</a></li>
-          <li><a href="#faq">Contact</a></li>
-          <li></li><input type="text" placeholder="Search.."></li>
-        </ul>
+    <nav class="flexmenu">
+      <div class="flex">
+        <div class="menu"><a href="#home"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/NewYorkTimes.svg/1280px-NewYorkTimes.svg.png" alt="coding dog" width="auto" height="32" > </a></div>
+        <div class="menu">
+          <a href="#">Home</a>
+        </div>
+        <div class="menu">
+          <a href="#">Blog</a>
+        </div>
+        <div class="menu">
+          <a href="#">Contact</a>
+        </div>
+        <div class="menu">
+          <input type="text" placeholder="Search article">
+        </div>
+
+
+        <div class="mobile-menu">
+          <span class="menu-icon open">&#x2261;</span>
+        </div>
+      </div>
     </nav>
     <article class="mainArticle">
       <img src="mainArticleImage.jpg" class="mainArticleImage" alt="A photo of Biden shaking hands a line of men">
