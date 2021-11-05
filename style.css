@@ -33,6 +33,10 @@ h3 {
   line-height: 17.7px;
 }
 
+.textSection {
+  display: inline-block;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Open Sans", Sans-Serif;
