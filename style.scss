@@ -119,6 +119,18 @@ h3 {
   display: inline-flex;
 }
 
+.banner{
+  position: relative;
+  color: white;
+}
+
+.banner p{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
