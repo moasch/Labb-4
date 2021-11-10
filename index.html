@@ -1,10 +1,97 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <title>Labb 4</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <script>
+
+        $(function() {
+            $(".toggle").on("click", function(){
+
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");
+
+                }
+                else {
+                    $(".item").addClass("active");
+                }
+            })
+        });
+
+    </script>
+
+
+
   </head>
   <body>
+    <header>
+      <nav>
+          <ul class="menu">
+              <li class="logo"><a href="#">Logotype</a></li>
+              <li class="item"><a href="#">News</a></li>
+              <li class="item"><a href="#">About us</a></li>
+              <li class="item"><a href="#">Press</a></li>
+              <li class="item"><a href="#">Careers</a></li>
+              <li class="item"><a href="#">Contact</a></li>
+              <li class="item search"><input type="text" placeholder="Search article"></li>
+              <li class="toggle"><span class="bars"></span></li>
+          </ul>
+      </nav>
+    </header>
 
+      <article class="mainArticle">
+        <img src="mainArticleImage.jpg" class="mainArticleImage" alt="A photo of Biden shaking hands a line of men">
+            <section class="text-block">
+              <p>Published Fri, 29 Oct 2021 by Roz<br></p>
+              <h2>Biden Begins a Diplomatic Marathon With a Visit to the Vatican</h2><br>
+              <h3>President Biden is meeting with Pope Francis ahead of the G20 summit<br>
+                in Rome and a climate gathering in Glasgow.</h3>
+              </section>
+      </article>
+      <aside class="flexbox">
+        <article class="subArticle">
+          <img src="subArticleImage.jpg" class="subArticleImage" alt="A photo of the mayor and another man">
+          <section class="text-block">
+          <p>Published Fri, 29 Oct 2021 by Dan Merica and Kevin Lipak, CNN<br></p>
+          <h2>A Last-Chance Guide to the New York Mayor’s Race</h2><br>
+          <h3>Fusion GPS was hired by a Democratic lawyer acting on behalf
+             of campaign and committee.</h3>
+           </section>
+
+
+
+        </article>
+        <section class="minArticle" id="firstMinArticle">
+          <img src="minArticleImage1.jpg" class="minArticleImageOne" alt="A photo of people marching for abortion rights">
+          <section class="textSection">
+            <h2>The surprising History of Roe v. Wade</h2>
+            <h3>The Constitution of the US protects a pregnant woman's liberty to choose to have an abortion.</h3>
+          </section>
+        </section>
+        <section class="minArticle" id="secondMinArticle">
+          <img src="minArticleImage2.jpg" class="minArticleImageTwo" alt="An animated image of a boy and two hands serving halloween candy">
+          <section class="textSection">
+            <h2>The Common Halloween Candy Mistakes That Parents Make</h2>
+            <ul>
+              <li><h3>Don't stress about the sweet tooth</h3></li>
+              <li><h3>Don't put the good stuff out of reach</h3></li>
+              <li><h3>Set limits</h3></li>
+            </ul>
+          </section>
+        </section>
+      </aside>
+
+    <section class="banner">
+      <img src="bannerImage.jpg" alt="A photo of the banner">
+      <p> Foodora</p>
+    </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
