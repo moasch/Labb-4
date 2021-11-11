@@ -1,64 +1,3 @@
-.mainArticle {
-  /* Container holding the image and the text */
-  position: relative;
-  text-align: left;
-  left: 169px;
-  /* Bottom right text */
-}
-.mainArticle .mainArticleImage {
-  width: 658px;
-  height: 553px;
-  margin: 17px;
-}
-.mainArticle .text-block {
-  position: absolute;
-  width: 658px;
-  height: 135px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  margin-top: 17px;
-  margin-right: 25px;
-  margin-bottom: 21px;
-  margin-left: 17px;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 40px;
-  padding-left: 20px;
-}
-
-.subArticle {
-  /* Container holding the image and the text */
-  position: relative;
-  text-align: left;
-  top: -595px;
-  left: 860px;
-  /* Bottom right text */
-}
-.subArticle .subArticleImage {
-  width: 392px;
-  height: 276px;
-  margin: 20px;
-}
-.subArticle .text-block {
-  position: absolute;
-  width: 392px;
-  height: 111px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  margin-top: 16px;
-  margin-right: 25px;
-  margin-bottom: 30px;
-  margin-left: 20px;
-  padding-top: 15px;
-  padding-right: 9px;
-  padding-bottom: 35px;
-  padding-left: 15px;
-}
-
 p {
   font-family: "Open Sans", sans-serif;
   font-size: 10px;
@@ -80,10 +19,6 @@ h3 {
   line-height: 17.7px;
 }
 
-.textSection {
-  display: inline-block;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -98,7 +33,7 @@ nav {
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
 }
 
-ul {
+.menu ul {
   list-style-type: none;
 }
 
@@ -206,6 +141,123 @@ input {
   top: -5px;
 }
 
+.main-flexbox {
+  max-width: 1200px;
+  margin: 17px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.leftFlex {
+  flex: 60%;
+  padding: 6px;
+}
+
+.rightFlex {
+  flex: 40%;
+  padding: 6px;
+}
+
+.mainArticle {
+  /* Container holding the image and the text */
+  position: relative;
+  text-align: left;
+  /* Bottom right text */
+}
+.mainArticle .mainArticleImage {
+  width: 100%;
+}
+.mainArticle .text-block {
+  position: absolute;
+  height: 135px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  /*
+            margin-top: 17px;
+            margin-right: 25px;
+            margin-bottom: 21px;
+            margin-left: 17px;
+  */
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+
+.subArticle {
+  /* Container holding the image and the text */
+  position: relative;
+  text-align: left;
+  /* Bottom right text */
+}
+.subArticle .subArticleImage {
+  width: 100%;
+  /*
+            width: 392px; //ej responsivt
+            height: 276px;
+  */
+}
+.subArticle .text-block {
+  position: absolute;
+  width: 100%;
+  /*
+  width: 392px; //ej responsivt
+  height: 111px;
+  */
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  /*
+  margin-top: 16px;
+  margin-right: 25px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  */
+  padding-top: 15px;
+  padding-right: 9px;
+  padding-bottom: 35px;
+  padding-left: 15px;
+}
+
+.banner {
+  width: 100%;
+}
+
+.minArticle-flexContainer {
+  width: 100%;
+  display: flex;
+}
+
+.imgCol {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: calc(44% - 10px);
+  margin: 5px;
+}
+
+.minArticleImage {
+  width: 100%;
+}
+
+.textCol {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc(56% - 10px);
+  margin: 5px;
+}
+
+/*Style the list*/
+ul.inside {
+  list-style-position: outside;
+}
+ul.inside li::marker {
+  font-size: 12px;
+}
+
 /* Tablet menu */
 @media all and (min-width: 468px) {
   .menu {
@@ -250,6 +302,11 @@ input {
     margin-right: 188px;
     order: 2;
     display: block;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main-flexbox {
+    flex-direction: column;
   }
 }
 
