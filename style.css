@@ -1,3 +1,4 @@
+@charset "UTF-8";
 p {
   font-family: "Open Sans", sans-serif;
   font-size: 10px;
@@ -171,7 +172,7 @@ input {
 .mainArticle .text-block {
   position: absolute;
   height: 135px;
-  bottom: 0px;
+  bottom: 3px;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
@@ -207,7 +208,7 @@ input {
   width: 392px; //ej responsivt
   height: 111px;
   */
-  bottom: 0px;
+  bottom: 3px;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
@@ -224,6 +225,9 @@ input {
 }
 
 .banner {
+  flex: 100%;
+}
+.banner img {
   width: 100%;
 }
 
@@ -233,10 +237,16 @@ input {
 }
 
 .imgCol {
+  flex: 29%;
+  margin-top: 9px;
+  flex-wrap: wrap;
+  /*
   flex-grow: 0;
   flex-shrink: 1;
-  flex-basis: calc(44% - 10px);
-  margin: 5px;
+  // WARNING: justera dessa värden
+  flex-basis: calc(44% - 10px); //ideal size for desktop
+  margin-right: 5px;
+  */
 }
 
 .minArticleImage {
@@ -244,15 +254,22 @@ input {
 }
 
 .textCol {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: calc(56% - 10px);
-  margin: 5px;
+  flex: 60%;
+  margin-top: 9px;
+  padding: 5px 5px 5px 10px;
+  padding-left: 10px;
+  /*
+    flex-grow: 1;
+    flex-shrink: 0;
+    // WARNING: justera denna siffra
+    flex-basis: calc(56% - 10px); //ideal size for desktop
+    margin: 5px;
+  */
 }
 
 /*Style the list*/
 ul.inside {
-  list-style-position: outside;
+  list-style-position: inside;
 }
 ul.inside li::marker {
   font-size: 12px;
@@ -308,6 +325,16 @@ ul.inside li::marker {
   .main-flexbox {
     flex-direction: column;
   }
+
+  /*
+  .banner{
+    width: 345px;
+    img{
+      width: 100%;
+    }
+
+  }
+  */
 }
 
 /*# sourceMappingURL=style.css.map */
