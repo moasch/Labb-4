@@ -12,7 +12,7 @@ h2 {
     font-family: "Times New Roman", Times, serif;
     font-size: 16px;
     font-weight: 700;
-    line-height: 22px;
+    line-height: 19px;
 }
 
 h3 {
@@ -31,6 +31,7 @@ h3 {
   margin: 0;
   padding: 0;
 }
+
 
 nav {
   background: white;
@@ -55,6 +56,7 @@ a:hover {
 
 .menu li{
   padding: 15px 0px;
+  list-style-type: none;
 }
 
 .menu li.item{
@@ -106,6 +108,7 @@ input {
 .item.search {
   order: 2;
   width: 100%;
+
 }
 
 .item {
@@ -313,29 +316,49 @@ input {
 
 /*Style the list*/
 ul.inside {
-  list-style-position: inside;
+  list-style-position: outside;
   li::marker{
-    font-size: 10px;
-    margin-left: 10px;
-
+    font-size: 12px;
   }
+  padding-left: 10px;
 }
 
-li.myList{
-  font-size: 12px;
+.myList {
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  line-height: 16px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17.7px;
 }
 //Responsive
+
+.navlinks{
+  display: flex;
+}
+
+.navMenu{
+  display: flex;
+  align-items: center;
+  //padding-left: 12.5vw; //200px;
+}
+//-------------------------------------------------------------------??????-------------------------------------------------------//
+.item:first-child{
+  padding-left: 75px;
+}
+
+
 
 
 //-----------Tablet view----------//
 /* Tablet menu */
 
 @media all and (min-width:468px) {
+  .menu li {
+    list-style-type: none;
+  };
+
   .menu {
-      justify-content: center;
+      justify-content: space-between;
+
   }
   .logo {
       flex: 1;
@@ -352,6 +375,69 @@ li.myList{
 
 }
 
+//------Styiling av search bar----------//
+
+#search-text-input{
+
+  border-top:thin solid black;
+
+  border-bottom:thin solid black;
+
+  border-right:thin solid black;
+
+  border-left: none;
+
+  border-radius: 0 10px 10px 0;
+
+  float:left;
+
+  height:29px;
+
+  margin:0 0 0 0;
+
+  outline:0;
+
+  padding:.4em 0 .4em .6em;
+
+  width:140px;
+
+}
+
+#button-holder{
+
+  background-color:white;
+
+  border-top:thin solid black;
+
+  border-bottom:thin solid black;
+
+  border-left:thin solid black;
+
+  border-right: none;
+
+  border-radius: 10px 0 0 10px;
+
+  cursor:pointer;
+
+  float:left;
+
+  height:29px;
+
+  margin:0 0 0 0;
+
+  text-align:center;
+
+  width:50px;
+
+}
+
+#button-holder img{
+
+  margin:4px;
+
+  width:18px;
+
+}
 
 @media all and (min-width:768px) {
 
@@ -370,7 +456,7 @@ li.myList{
       order: 1;
   }
   .item.search {
-      margin-right: 188px;
+      margin-right: 18.5vw;//188px;
       order: 2;
       display: block;
   }
@@ -383,6 +469,8 @@ li.myList{
     margin-left: 15px;
     margin-right: 15px;
   }
+
+
 
   .divider{
     flex: none;
@@ -436,6 +524,11 @@ li.myList{
      padding-left: 73%;
    }
  }
+
+ h2{
+   font-size: 14px;
+ }
+
 
 
 }
