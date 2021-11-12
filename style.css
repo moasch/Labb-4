@@ -9,7 +9,7 @@ h2 {
   font-family: "Times New Roman", Times, serif;
   font-size: 16px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 19px;
 }
 
 h3 {
@@ -48,6 +48,7 @@ a:hover {
 
 .menu li {
   padding: 15px 0px;
+  list-style-type: none;
 }
 
 .menu li.item {
@@ -267,24 +268,41 @@ input {
 
 /*Style the list*/
 ul.inside {
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 10px;
 }
 ul.inside li::marker {
-  font-size: 10px;
-  margin-left: 10px;
+  font-size: 12px;
 }
 
-li.myList {
-  font-size: 12px;
+.myList {
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  line-height: 16px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17.7px;
+}
+
+.navlinks {
+  display: flex;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+}
+
+.item:first-child {
+  padding-left: 75px;
 }
 
 /* Tablet menu */
 @media all and (min-width: 468px) {
+  .menu li {
+    list-style-type: none;
+  }
+
   .menu {
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .logo {
@@ -302,6 +320,40 @@ li.myList {
     margin-right: 15px;
   }
 }
+#search-text-input {
+  border-top: thin solid black;
+  border-bottom: thin solid black;
+  border-right: thin solid black;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  float: left;
+  height: 29px;
+  margin: 0 0 0 0;
+  outline: 0;
+  padding: 0.4em 0 0.4em 0.6em;
+  width: 140px;
+}
+
+#button-holder {
+  background-color: white;
+  border-top: thin solid black;
+  border-bottom: thin solid black;
+  border-left: thin solid black;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  float: left;
+  height: 29px;
+  margin: 0 0 0 0;
+  text-align: center;
+  width: 50px;
+}
+
+#button-holder img {
+  margin: 4px;
+  width: 18px;
+}
+
 @media all and (min-width: 768px) {
   .item {
     display: block;
@@ -322,7 +374,7 @@ li.myList {
   }
 
   .item.search {
-    margin-right: 188px;
+    margin-right: 18.5vw;
     order: 2;
     display: block;
   }
@@ -375,6 +427,10 @@ li.myList {
   }
   .subArticle .subArrowPosition {
     padding-left: 73%;
+  }
+
+  h2 {
+    font-size: 14px;
   }
 }
 
