@@ -1,7 +1,10 @@
 //----------Font styling-------//
 
+$base-font: "Open Sans", sans-serif;
+
+
 p {
-  font-family: "Open Sans", sans-serif;
+  font-family: $base-font;
   font-size: 10px;
   font-weight: 300;
   line-height: 13.2px;
@@ -12,19 +15,19 @@ h2 {
     font-family: "Times New Roman", Times, serif;
     font-size: 16px;
     font-weight: 700;
-    line-height: 19px;
+    line-height: 17px;
 }
 
 h3 {
     // color: white; /*will add later*/
-    font-family: "Open Sans", sans-serif;
+    font-family: $base-font;
     font-size: 13px;
     font-weight: 400;
     line-height: 17.7px;
 
 }
 
-//---------Styling av meny---------//
+//---------Menu/header styling---------//
 
 * {
   box-sizing: border-box;
@@ -75,7 +78,7 @@ li.logo {
 
 
 .logo a {
-  font-family: "Open Sans", Sans-Serif;
+  font-family: $base-font; //"Open Sans", Sans-Serif;
   font-size: 24px;
   color: rgba(10, 85, 130, 1);
   margin-left: 21px;
@@ -112,7 +115,7 @@ input {
 }
 
 .item {
-  font-family: "Open Sans", Sans-Serif;
+  font-family: $base-font;// "Open Sans", Sans-Serif;
   font-size: 13px;
   color: rgba(10, 10, 10, 1);
   width: 100%;
@@ -121,9 +124,12 @@ input {
   display: none;
 }
 
+
 .item.active {
   display: block;
+  width: 100%;
 }
+
 
 .toggle {
   cursor: pointer;
@@ -161,7 +167,7 @@ input {
 
 
 .main-flexbox{
-  max-width: 1200px;
+  max-width: 1062px;
   margin: 17px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -175,17 +181,16 @@ input {
 
 
 .leftFlex{
-  flex: 60%;      //utan flex här så fungerar flex-direction row för mindre skärmar
-  padding: 6px;
-
+  flex: 61%;      //utan flex här så fungerar flex-direction row för mindre skärmar
+  max-width: 658px;
 }
 
 
 //----------Right MAIN flex column------//
 
 .rightFlex{
-  flex: 40%;
-  padding: 6px;
+  flex: 37%;
+  max-width: 392px;
 }
 
 
@@ -205,7 +210,6 @@ input {
         .text-block {
           position: absolute;
           width: 100%;
-          //height: 135px;
           bottom: 3px;
           left: 0px;
           background-color: rgba(0, 0, 0, 0.7);
@@ -231,7 +235,7 @@ input {
   /* Container holding the image and the text */
   position: relative;
   text-align: left;
-
+  max-height: 276px;
         .subArticleImage {
           width: 100%;
           }
@@ -250,17 +254,90 @@ input {
                 padding-left: 15px;
               }
               .subSmallTtextPosition{
-                padding-left: 80%;
+                padding-left: 75%;
                 line-height: 0;
               }
               .subArrowPosition{
-                padding-left: 80%;
+                padding-left: 75%;
               }
 }
 
+
+
+//----------Nested flex container-----//
+
+.minArticle-flexContainer{
+  width: 100%;
+  display: flex;
+  margin-top: 9px;
+}
+
+//--------Left NESTED flex column-----//
+.imgCol{
+  flex: 45%;
+  flex-wrap: wrap;
+
+}
+
+.minArticleImage{
+  width: 100%;
+}
+
+#imgOne{
+  height: 126px;
+}
+
+#imgTwo{
+  height: 133px;
+}
+
+//-------Right NESTED flex column-----//
+.textCol{
+  flex: 55%;
+  padding-left: 10px;
+}
+
+//--------First minArticle-----------//
+
+#minArticleOne{
+  max-height: 126px;
+}
+
+//--------Second minArticle---------//
+
+#minArticleTwo{
+  max-height: 133px;
+}
+
+ul.inside {
+  list-style-position: outside;
+  li::marker{
+    font-size: 8px;
+  }
+  padding-left: 20px;
+}
+
+.myList {
+  font-family: $base-font; //"Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17.7px;
+}
+
+
+//----------------Styling of divider---------------//
+
+.divider{
+  flex: 100%;
+  background-color: black;
+  height: 1px;
+  margin: 15px 0px 12px 0px;
+}
+
+//---------Styling of banner-------//
+
 .banner{
   flex: 100%;
-  padding: 6px;
   img{
     width: 100%;
     height: 145px;
@@ -277,59 +354,7 @@ input {
   font-weight: 700;
 }
 
-.divider{
-  flex: 100%;
-  background-color: black;
-  height: 1px;
-  //margin-left: 6px;
-  //margin-right: 6px;
-  margin: 6px;
-}
-
-//----------Nested flex container-----//
-
-.minArticle-flexContainer{
-  width: 100%;
-  display: flex;
-}
-
-//--------Left NESTED flex column-----//
-.imgCol{
-  flex: 45%;
-  margin-top: 9px;
-  flex-wrap: wrap;
-
-}
-
-.minArticleImage{
-  width: 100%;
-  height: 120px;
-}
-
-//-------Right NESTED flex column-----//
-.textCol{
-  flex: 55%;
-  margin-top: 9px;
-  //padding: 5px 5px 5px 10px;
-  padding-left: 10px;
-}
-
-/*Style the list*/
-ul.inside {
-  list-style-position: outside;
-  li::marker{
-    font-size: 12px;
-  }
-  padding-left: 10px;
-}
-
-.myList {
-  font-family: "Open Sans", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 17.7px;
-}
-//Responsive
+//-----------------Responsivr menu (MORE)--------------------//
 
 .navlinks{
   display: flex;
@@ -340,7 +365,7 @@ ul.inside {
   align-items: center;
   //padding-left: 12.5vw; //200px;
 }
-//-------------------------------------------------------------------??????-------------------------------------------------------//
+
 .item:first-child{
   padding-left: 75px;
 }
@@ -468,16 +493,15 @@ ul.inside {
     flex-direction: column;
     margin-left: 15px;
     margin-right: 15px;
+    margin-bottom: 15px;
   }
-
-
 
   .divider{
     flex: none;
   }
 
-  .minArticleImage{
-    height: 135px;
+  .leftFlex{
+    margin-bottom: 9px;
   }
 
   .banner{
@@ -506,9 +530,15 @@ ul.inside {
  }
 
  .mainArticle{
+   .cropped{
+     width: 100%;
+     height: 190px;
+     object-fit: cover;
+     object-position: 50% 30%;
+   }
+
    .mainSmallTtextPosition{
      padding-left: 75%;
-     //line-height: 0;
    }
    .mainArrowPosition{
      padding-left: 75%;
@@ -516,6 +546,12 @@ ul.inside {
  }
 
  .subArticle{
+   .cropped{
+     width: 100%;
+     height: 150px;
+     object-fit: cover;
+     object-position: 50% 40%;
+   }
    .subSmallTtextPosition{
      padding-left: 73%;
      //line-height: 0;
