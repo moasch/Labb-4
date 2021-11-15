@@ -9,7 +9,7 @@ h2 {
   font-family: "Times New Roman", Times, serif;
   font-size: 16px;
   font-weight: 700;
-  line-height: 19px;
+  line-height: 17px;
 }
 
 h3 {
@@ -65,7 +65,7 @@ li.logo {
 }
 
 .logo a {
-  font-family: "Open Sans", Sans-Serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 24px;
   color: #0a5582;
   margin-left: 21px;
@@ -99,7 +99,7 @@ input {
 }
 
 .item {
-  font-family: "Open Sans", Sans-Serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   color: #0a0a0a;
   width: 100%;
@@ -110,6 +110,7 @@ input {
 
 .item.active {
   display: block;
+  width: 100%;
 }
 
 .toggle {
@@ -143,7 +144,7 @@ input {
 }
 
 .main-flexbox {
-  max-width: 1200px;
+  max-width: 1062px;
   margin: 17px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -151,13 +152,13 @@ input {
 }
 
 .leftFlex {
-  flex: 60%;
-  padding: 6px;
+  flex: 61%;
+  max-width: 658px;
 }
 
 .rightFlex {
-  flex: 40%;
-  padding: 6px;
+  flex: 37%;
+  max-width: 392px;
 }
 
 .mainArticle {
@@ -193,6 +194,7 @@ input {
   /* Container holding the image and the text */
   position: relative;
   text-align: left;
+  max-height: 276px;
   /* Bottom right text */
 }
 .subArticle .subArticleImage {
@@ -211,16 +213,73 @@ input {
   padding-left: 15px;
 }
 .subArticle .subSmallTtextPosition {
-  padding-left: 80%;
+  padding-left: 75%;
   line-height: 0;
 }
 .subArticle .subArrowPosition {
-  padding-left: 80%;
+  padding-left: 75%;
+}
+
+.minArticle-flexContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 9px;
+}
+
+.imgCol {
+  flex: 45%;
+  flex-wrap: wrap;
+}
+
+.minArticleImage {
+  width: 100%;
+}
+
+#imgOne {
+  height: 126px;
+}
+
+#imgTwo {
+  height: 133px;
+}
+
+.textCol {
+  flex: 55%;
+  padding-left: 10px;
+}
+
+#minArticleOne {
+  max-height: 126px;
+}
+
+#minArticleTwo {
+  max-height: 133px;
+}
+
+ul.inside {
+  list-style-position: outside;
+  padding-left: 20px;
+}
+ul.inside li::marker {
+  font-size: 8px;
+}
+
+.myList {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17.7px;
+}
+
+.divider {
+  flex: 100%;
+  background-color: black;
+  height: 1px;
+  margin: 15px 0px 12px 0px;
 }
 
 .banner {
   flex: 100%;
-  padding: 6px;
   position: relative;
 }
 .banner img {
@@ -235,51 +294,6 @@ input {
   color: white;
   font-size: 24px;
   font-weight: 700;
-}
-
-.divider {
-  flex: 100%;
-  background-color: black;
-  height: 1px;
-  margin: 6px;
-}
-
-.minArticle-flexContainer {
-  width: 100%;
-  display: flex;
-}
-
-.imgCol {
-  flex: 45%;
-  margin-top: 9px;
-  flex-wrap: wrap;
-}
-
-.minArticleImage {
-  width: 100%;
-  height: 120px;
-}
-
-.textCol {
-  flex: 55%;
-  margin-top: 9px;
-  padding-left: 10px;
-}
-
-/*Style the list*/
-ul.inside {
-  list-style-position: outside;
-  padding-left: 10px;
-}
-ul.inside li::marker {
-  font-size: 12px;
-}
-
-.myList {
-  font-family: "Open Sans", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 17.7px;
 }
 
 .navlinks {
@@ -384,14 +398,15 @@ ul.inside li::marker {
     flex-direction: column;
     margin-left: 15px;
     margin-right: 15px;
+    margin-bottom: 15px;
   }
 
   .divider {
     flex: none;
   }
 
-  .minArticleImage {
-    height: 135px;
+  .leftFlex {
+    margin-bottom: 9px;
   }
 
   .banner img {
@@ -415,6 +430,12 @@ ul.inside li::marker {
     padding-bottom: 6px;
   }
 
+  .mainArticle .cropped {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
   .mainArticle .mainSmallTtextPosition {
     padding-left: 75%;
   }
@@ -422,6 +443,12 @@ ul.inside li::marker {
     padding-left: 75%;
   }
 
+  .subArticle .cropped {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 50% 40%;
+  }
   .subArticle .subSmallTtextPosition {
     padding-left: 73%;
   }

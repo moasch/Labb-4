@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <title>Labb 4</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
@@ -16,7 +20,6 @@
 
                 if($(".item").hasClass("active")){
                     $(".item").removeClass("active");
-
                 }
                 else {
                     $(".item").addClass("active");
@@ -60,10 +63,10 @@
       <section class="leftFlex">
 
         <article class="mainArticle">
-          <img src="mainArticleImage.jpg" class="mainArticleImage" alt="A photo of Biden shaking hands a line of men">
+          <img src="mainArticleImage.jpg" class="mainArticleImage cropped" alt="A photo of Biden shaking hands a line of men">
               <section class="text-block">
                 <p>Published Fri, 29 Oct 2021 by Roz</p>
-                <h2>Biden Begins a Diplomatic Marathon With a Visit to the Vatican</h2>
+                <h2>Biden Begins a Diplomatic Marathon <br> With a Visit to the Vatican</h2>
                 <br>
                 <h3 class="hideText">President Biden is meeting with Pope Francis ahead of the G20 summit in <br>Rome and a climate gathering in Glasgow.</h3>
                 <p class="mainSmallTtextPosition">Read more</p>
@@ -76,7 +79,7 @@
       <aside class="rightFlex">
 
         <article class="subArticle">
-          <img src="subArticleImage.jpg" class="subArticleImage" alt="A photo of the mayor and another man">
+          <img src="subArticleImage.jpg" class="subArticleImage cropped" alt="A photo of the mayor and another man">
           <section class="text-block">
             <p>Published Fri, 29 Oct 2021 by Dan Merica and Kevin Lipak, CNN<br></p>
             <h2>A Last-Chance Guide to the New York Mayor’s Race</h2><br>
@@ -87,9 +90,9 @@
         </article>
 
         <!--Create nested flexbox container-->
-        <section class="minArticle-flexContainer">
+        <section class="minArticle-flexContainer" id="minArticleOne">
           <section class="imgCol">
-            <img src="minArticleImage1.jpg" class="minArticleImage" alt="A photo of people marching for abortion rights">
+            <img src="minArticleImage1.jpg" class="minArticleImage" id="imgOne" alt="A photo of people marching for abortion rights">
           </section>
           <section class="textCol">
             <h2>The surprising History of Roe v. Wade</h2>
@@ -98,9 +101,9 @@
         </section>
 
         <!--Create nested flexbox container-->
-        <section class="minArticle-flexContainer">
+        <section class="minArticle-flexContainer" id="minArticleTwo">
           <section class="imgCol">
-            <img src="minArticleImage2.jpg" class="minArticleImage" alt="An animated image of a boy and two hands serving halloween candy">
+            <img src="minArticleImage2.jpg" class="minArticleImage" id="imgTwo" alt="An animated image of a boy and two hands serving halloween candy">
           </section>
           <section class="textCol">
             <h2>The Common Halloween Candy Mistakes That Parents Make</h2>
