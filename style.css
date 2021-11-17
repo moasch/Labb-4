@@ -139,20 +139,17 @@ h3 {
   text-align: left;
   /* Bottom right text */
 }
-.mainArticle .mainArticleImage {
+.mainArticle s .mainArticleImage {
   width: 100%;
 }
 .mainArticle .text-block {
   position: absolute;
   width: 100%;
-  bottom: 3px;
+  bottom: 4px;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
+  padding: 20px;
 }
 .mainArticle .mainSmallTtextPosition {
   padding-left: 87%;
@@ -175,7 +172,7 @@ h3 {
 .subArticle .text-block {
   position: absolute;
   width: 100%;
-  bottom: 3px;
+  bottom: 0px;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
@@ -357,6 +354,7 @@ ul.inside li::marker {
 
   .mainArticle .text-block, .subArticle .text-block {
     padding-bottom: 6px;
+    bottom: 4px;
   }
 
   .mainArticle .cropped {
