@@ -8,7 +8,7 @@ hamburger.addEventListener("click", mobileMenu);
 
 // Function mobileMenu
 function mobileMenu() {
-    hamburger.classList.toggle("active"); // Toggle between showing the hamburger menu and a cross.
-    navMenu.classList.toggle("show"); // Toggle between showing and not showing the mobile menu.
-    mainFlexbox.classList.toggle("adaptToMenu"); // Toggle between adapting the main flexbox to the header and the navMenu..
+    hamburger.classList.toggle("active"); // Toggle between showing the hamburger menu and a cross with class active.
+    navMenu.classList.toggle("show"); // Toggle between showing and not showing the mobile menu with class show.
+    mainFlexbox.classList.toggle("adaptToMenu"); // Toggle between adapting the main flexbox to the header and the navMenu.
 }
